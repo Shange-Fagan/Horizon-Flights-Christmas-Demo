@@ -10,6 +10,14 @@
   <div id="globeViz"></div>
 
   <script>
+    // Set up the Three.js scene
+    const scene = new THREE.Scene();
+    const renderer = new THREE.WebGLRenderer({ antialias: true });
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    document.body.appendChild(renderer.domElement);
+
+    // Set a plain blue background for the scene
+    scene.background = new THREE.Color(0x0000ff); // Hex code for blue
     let currentColorIndex = 0; // Start with the first color
 
     // Array of globe colors (or image URLs if using textures)
