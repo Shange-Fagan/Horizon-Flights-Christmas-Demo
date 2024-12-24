@@ -59,7 +59,10 @@
           .hexPolygonResolution(3)
           .hexPolygonMargin(0.3)
           .hexPolygonUseDots(true)
-          .hexPolygonColor(() => '#FFD700') // Gold color for polygons
+          .hexPolygonColor(({ properties }) => {
+            // Alternate between golden shades for a dynamic effect
+            return Math.random() > 0.5 ? '#FFD700' : '#DAA520';
+          })
           .backgroundColor('#87CEEB'); // Set background color to blue
 
             // Access controls and enable auto-rotation
