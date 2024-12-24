@@ -62,6 +62,11 @@
           .hexPolygonColor(() => '#FFD700') // Gold color for polygons
           .backgroundColor('#87CEEB'); // Set background color to blue
 
+            // Access controls and enable auto-rotation
+        const controls = christmasGlobe.controls();
+        controls.autoRotate = true; // Enable auto-rotation
+        controls.autoRotateSpeed = 2; // Set the rotation speed (default is 2)
+
         christmasGlobe.geometry = christmasGeometry;
         
         // Toggle globe colors every 2 seconds (or any preferred interval)
