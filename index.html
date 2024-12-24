@@ -63,7 +63,7 @@
             // Alternate between golden shades for a dynamic effect
             return Math.random() > 0.5 ? '#FFD700' : '#DAA520';
           })
-          .backgroundColor('#87CEEB'); // Set background color to blue
+          .backgroundColor('#87CEEB') // Set background color to blue
           .hexPolygonLabel(({ properties: d }) => `
             <b>${d.ADMIN} (${d.ISO_A2})</b> <br />
             Population: <i>${d.POP_EST}</i>
