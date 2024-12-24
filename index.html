@@ -67,6 +67,13 @@
         controls.autoRotate = true; // Enable auto-rotation
         controls.autoRotateSpeed = 2; // Set the rotation speed (default is 2)
 
+            // Render loop for the globe
+        function animate() {
+          controls.update(); // Update controls for rotation
+          requestAnimationFrame(animate); // Keep animating
+        }
+        animate();
+
         christmasGlobe.geometry = christmasGeometry;
         
         // Toggle globe colors every 2 seconds (or any preferred interval)
